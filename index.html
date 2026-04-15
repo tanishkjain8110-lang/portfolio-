@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanishk Jain | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-color: linear-gradient(135deg, #e0ecff, #f5f5f7);
+    --text-color: #1d1d1f;
+    --accent-color: #0071e3;
+    --card-bg: #ffffff;
+    --secondary-text: #86868b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 20px;
+    opacity: 0.8;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 56px;
+}
+
+.hero p {
+    font-size: 22px;
+    color: var(--secondary-text);
+}
+
+/* Sections */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.card, .full-width-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: #f0f0f2;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-link {
+    color: var(--accent-color);
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1 {font-size: 38px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<h1>Tanishk Jain</h1>
+<p>Aspiring Software Engineer (AI | Cybersecurity | Web Dev)</p>
+</section>
+
+<div class="container" id="about">
+<h2 class="section-title">Overview</h2>
+<div class="full-width-card">
+<p>B.Tech student skilled in C, C++, HTML, CSS with interest in AI & Cybersecurity.</p>
+</div>
+</div>
+
+<div class="container" id="education">
+<h2 class="section-title">Education</h2>
+<div class="full-width-card">
+<h3>B.Tech CSE</h3>
+<p>ITM Gwalior (2023–2027)</p>
+<span class="tag">CGPA: 6.0</span>
+</div>
+</div>
+
+<div class="container" id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="grid">
+<div class="card">
+<h3>Languages</h3>
+<span class="tag">C</span>
+<span class="tag">C++</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+</div>
+
+<div class="card">
+<h3>Tools</h3>
+<span class="tag">VS Code</span>
+<span class="tag">Colab</span>
+</div>
+
+<div class="card">
+<h3>Concepts</h3>
+<span class="tag">DSA</span>
+<span class="tag">Web Dev</span>
+</div>
+</div>
+</div>
+
+<div class="container" id="projects">
+<h2 class="section-title">Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Library Management</h3>
+<p>CRUD system for managing books and users.</p>
+</div>
+
+<div class="card">
+<h3>Sentiment Analyzer</h3>
+<p>Classifies user opinion using NLP.</p>
+</div>
+
+<div class="card">
+<h3>CGPA Predictor</h3>
+<p>Predicts CGPA using logic-based model.</p>
+</div>
+
+</div>
+</div>
+
+<footer id="contact">
+<h2>Contact</h2>
+<a href="mailto:tanishkjain8110@gmail.com" class="contact-link">Email</a>
+<a href="tel:+918817361236" class="contact-link">Phone</a>
+<p style="margin-top:20px;font-size:12px;">© 2024 Tanishk Jain</p>
+</footer>
+
+<script>
+document.querySelectorAll('nav a').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+</script>
+
+</body>
+</html>
